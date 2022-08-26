@@ -1,0 +1,53 @@
+.navbtn{
+    margin-left: 20px;
+}
+.navbtn:hover{
+    transform: scale(1.1);
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    display: inline;
+    float: left;
+}
+.linkstyle{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menubg{
+    color: white;
+    text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.menubg:hover{
+    text-shadow: 2px 2px 8px white;
+    color: red;
+    transform: scale(1.1);
+}
+.navbrand{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 40px;
+letter-spacing: 0px;
+word-spacing: 2px;
+color: #D7F2F7;
+font-weight: 700;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+.navbrand:hover{
+    text-shadow: 2px 2px 8px white;
+}
+.cartcount{
+    border-radius: 500px;
+    padding: 0.2rem;
+    background-color: green;
+}
