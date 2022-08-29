@@ -12,7 +12,7 @@ function NavbarComp() {
                     <Link to='/menswear' className=' navbtn menubg'> Mens Wear</Link>
                     <Link to='/ladieswear' className='navbtn menubg'> Ladies Wear</Link>
                     <Link to='/kidswear' className='navbtn menubg'> Kids Wear</Link>
-                    <img src='https://cdn-icons-png.flaticon.com/128/891/891407.png' style={{width: "50px", marginLeft:"3px"}}/><span className='cartcount'>0</span>
+                    <Link to='/payment'><img src='https://cdn-icons-png.flaticon.com/128/891/891407.png' style={{width: "50px", marginLeft:"3px"}}/></Link><span className='cartcount'>0</span>
                     <Link to='/login' className='btn btn-success navbtn'>Login</Link>
                     <Link to='signup' className='btn btn-success navbtn'>Signup</Link>
                 </NavItem>

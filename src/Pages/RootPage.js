@@ -9,17 +9,16 @@ import {
     Link
 } from 'react-router-dom'
 import NavbarComp from '../NavbarComp'
-import { CarouselItem } from 'react-bootstrap'
 import Footers from '../Footers'
 function RootPage() {
     const [productType, setProductType] = useState(Kidsweardata)
 
     return (
-        <div>
+        <div style={{paddingBottom:'0%'}}>
             <h1 className='shoplogo'>Happy Buying</h1>
             <NavbarComp />
             <div className='fullcrousel'>
-                <div style={{flex:"1000rem"}}>
+                <div style={{ flex: "1000rem" }}>
                     <Carousel className='crouselimg'>
                         <Carousel.Item>
                             <img
@@ -68,11 +67,13 @@ function RootPage() {
                                 <Card.Title>Card Title</Card.Title>
                                 <h6>Ratings: 5/5</h6>
                                 <Card.Text>
-                                    This is the card text.<br/>
+                                    This is the card text.<br />
                                     <b>{item.name}</b>
                                 </Card.Text>
                                 <Button className='btn-warning'>Add to Cart</Button>
-                                <Button className='btn-success' style={{ marginLeft: '0.5rem' }}>Buy Now</Button>
+                                <Link to='/payment' className='btn btn-success' style={{ marginLeft: '0.5rem' }}>Buy Now</Link>
+                                {/* <Button className='btn-warning'>Update</Button>
+                                <Button className='btn-success' style={{ marginLeft: '0.5rem' }}>Delete</Button> */}
                             </Card.Body>
                         </Card>
                     ))

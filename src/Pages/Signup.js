@@ -1,15 +1,16 @@
 import React from 'react'
 import {Button, Form, FormGroup, Label, Input, FormText, Nav, Navbar, NavItem} from 'reactstrap'
 import {Link} from 'react-router-dom'
+import './signup.css'
 function Signup() {
   return (
     <div>
         <Navbar style={{marginLeft: "25%", marginRight: "25%"}} dark>
-            <NavItem>
+            <NavItem className='heading'>
                 <h1>SIGNUP</h1>
             </NavItem>
         </Navbar>
-        <Form style={{marginLeft: "25%", marginRight: "25%", marginBottom: "0%", border: "2px solid black", borderRadius:"5px",  backgroundColor: "wheat" }}>
+        <Form className='box' style={{}}>
             <div style={{margin: "2rem"}}>
             <FormGroup>
                 <Label>Email</Label>

@@ -1,0 +1,24 @@
+.heading {
+    text-shadow: 0 0 10px #FFFFFF;
+    color: #FFFFFF;
+    /* background: #912C22; */
+    align-content: center;
+}
+.heading1 {
+    text-shadow: 0 0 10px #FFFFFF;
+    color: #FFFFFF;
+    /* background: #912C22; */
+    align-content: center;
+    margin: 15rem;
+}
+
+.box {
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 0%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: wheat
+}

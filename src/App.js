@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,6 +14,7 @@ import Signup from './Pages/Signup'
 import UserCart from './Pages/User/UserCart'
 import UserDashboard from './Pages/User/UserDashboard'
 import UserLogin from './Pages/User/UserLogin'
+import PaymentPage from './Pages/PaymentPage';
 function App() {
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
           <Route path='/userlogin' element={<UserLogin />}></Route>
           <Route path='/userdashboard' element={<UserDashboard />}></Route>
           <Route path='/usercart' element={<UserCart />}></Route>
+          <Route path='/payment' element={<PaymentPage/>}/>
         </Routes>
       </Router>
     </div>
