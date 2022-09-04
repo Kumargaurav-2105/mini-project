@@ -1,0 +1,19 @@
+const userCredentials=[
+    {
+        email:'kumar@gmail.com',
+        password:'Kumar@1234'
+    },
+    {
+        email:'gaurav@gmail.com',
+        password:'Gaurav@1234'
+    },
+    {
+        email:'shiva@gmail.com',
+        password:'Shiva@1234'
+    },
+    {
+        email:'rudra@gmail.com',
+        password:'Rudra@1234'
+    },
+]
+module.exports=userCredentials

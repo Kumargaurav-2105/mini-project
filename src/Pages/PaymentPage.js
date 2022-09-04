@@ -1,32 +1,30 @@
 import React, { useState } from 'react'
 import './Paymentpage.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { remove } from '../store/CartSlice'
 import * as ReactBootstrap from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 function PaymentPage() {
+    const item = useSelector((state) => state.cart)
+    const dispatch = useDispatch();
     const [totalprice, settotalprice] = useState(0)
-    const item = [
-        { name: "T-shirt", price: 200, quantity: 3 },
-        { name: "T-shirt", price: 200, quantity: 1 },
-        { name: "T-shirt", price: 200, quantity: 2 },
-        { name: "T-shirt", price: 200, quantity: 1 },
-        { name: "T-shirt", price: 200, quantity: 4 },
-        { name: "T-shirt", price: 200, quantity: 1 },
-        { name: "T-shirt", price: 200, quantity: 6 }
-    ]
     const setprice = (ip, iq) => {
         settotalprice(ip * iq)
     }
+    const handleRemove=(id)=>{
+        dispatch(remove(id))
+      }
     const renderItem = (item, index) => {
         // setprice(item.price*item.quantity)
         return (
             <tr key={index}>
                 <td>{item.name}</td>
                 <td>{item.price}</td>
-                <td>{item.quantity}</td>
-                <td>{item.price * item.quantity}</td>
-                <td><Button className='btn-success' onClick={() => { settotalprice(item.price * item.quantity + totalprice) }}>ADD</Button>
-                    <Button className='btn-danger' style={{ marginLeft: "0.5rem" }} onClick={() => { settotalprice(totalprice - (item.price * item.quantity)) }}>REMOVE</Button></td>
+                <td>1</td>
+                <td><Button className='btn-success' onClick={() => { settotalprice(item.price + totalprice) }}>ADD</Button>
+                    <Button className='btn-danger' style={{ marginLeft: "0.5rem" }} onClick={() => { settotalprice(totalprice - item.price ) }}>REMOVE</Button></td>
+                <td><Button onClick={()=>handleRemove(item.id)}>Remove this item</Button></td>
             </tr>
         )
     }
@@ -40,8 +38,8 @@ function PaymentPage() {
                             <th>Item Name</th>
                             <th>Item Price</th>
                             <th>Item Quantity</th>
-                            <th>Total Item Price</th>
                             <th>Add this item</th>
+                            <th>Remove from cart</th>
                         </tr>
                     </thead>
                     <tbody>
